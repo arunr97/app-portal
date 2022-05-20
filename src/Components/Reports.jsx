@@ -30,7 +30,7 @@ export default function Reports() {
                                 <input  type="text"  />
                             </Col>
                         </Row><br></br><br></br>
-                            <Button className="btn-primary"
+                            <Button className="cra-button"
                                  size="l">
                                     Download Excel
                             </Button>

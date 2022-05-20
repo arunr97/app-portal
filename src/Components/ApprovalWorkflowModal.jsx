@@ -58,7 +58,7 @@ export default function ApprovalWorkflow(props) {
           </Col></Row>
       </Modal.Body>
       <Modal.Footer>
-        <Button>
+        <Button className="cra-button">
           Save
         </Button>
       </Modal.Footer>

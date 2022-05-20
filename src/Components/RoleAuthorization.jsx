@@ -17,7 +17,7 @@ useEffect(()=>{
         </Col>
         </Row>
       </Container>
-<Button className="pink-btn"
+<Button className=" cra-button pink-btn"
 onClick={()=>setShowForm(true)}
 // style={{ float: "left" }}
 >

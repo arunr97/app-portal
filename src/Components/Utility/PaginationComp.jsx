@@ -1,14 +1,7 @@
 import React from "react";
 import { usePagination } from "../../hooks/usePagination";
 
-import {
-  SkipForwardFill,
-  SkipStartFill,
-  SkipEndFill,
-  SkipBackwardFill,
-  ChevronLeft,
-  ChevronRight,
-} from "react-bootstrap-icons";
+import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 const PaginationComp = (props) => {
   const { onPageChange, totalCount, currentPage, pageSize } = props;
 
@@ -29,13 +22,13 @@ const PaginationComp = (props) => {
     onPageChange(currentPage - 1);
   };
 
-  const onFirstPage = () => {
-    onPageChange(1);
-  };
+  //   const onFirstPage = () => {
+  //     onPageChange(1);
+  //   };
 
-  const onLastPage = () => {
-    onPageChange(lastPage);
-  };
+  //   const onLastPage = () => {
+  //     onPageChange(lastPage);
+  //   };
 
   return (
     <div className="pagintion-bar">

@@ -14,13 +14,7 @@ export default function ApprovalWorkFlow() {
           </Col>
         </Row>
       </Container>
-      <Button className="btn-primary"
-        size="sm"
-        onClick={() => setShow(true)}
-      // style={{ float: "left" }}
-      >
-        + Add New
-      </Button>
+      <Button className="cra-button pink-btn" onClick={() => setShow(true)}>+ Add New </Button>
       {show && <ApprovalWorkflow
         show={show}
         onHide={() => setShow(false)}

@@ -70,8 +70,8 @@ export default function RequestForm() {
                 </div>
                 <br></br>
                 <Stack gap={2} direction="horizontal">
-                <Button variant="outline-primary">Cancel</Button>
-                <Button variant="primary">Save</Button>
+                <Button className="cra-button" variant="outline-primary">Cancel</Button>
+                <Button className="cra-button" variant="primary">Save</Button>
                 </Stack>
             </Container>
         </div>
