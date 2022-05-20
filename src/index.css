@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.mb-2 input,
+.create select {
+  border: 3px solid #ddd;
+  border-radius: 5px;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  width: 50%;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  /* left: 800px; */
+
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+input {
+  margin-right: 10px;
+}
