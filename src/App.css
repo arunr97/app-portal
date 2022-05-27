@@ -4,14 +4,15 @@
 }
 
 .cra-button {
-  border-radius: 30px !important; 
+  border-radius: 30px !important;
   padding-left: 40px !important;
   padding-right: 40px !important;
 }
 
- .pink-btn{
-  background-color:rgb(167, 20, 89) !important;
-} 
+.pink-btn {
+  background-color: #b70452 !important;
+  border: 1px solid #b70452 !important;
+}
 
 /* login page start*/
 
@@ -28,8 +29,9 @@
 }
 
 .login-btn {
-  width: 12rem;
-  background-color: mediumvioletred !important;
+  width: 15rem;
+  background-color: #b70452 !important;
+  border: 1px solid #b70452 !important;
 }
 
 /* login page end*/
