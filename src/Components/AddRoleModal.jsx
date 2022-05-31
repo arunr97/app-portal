@@ -10,10 +10,10 @@ export default function AddRole(props) {
         <Row>
 
     <Col>
-    <input className="control" type="text" placeholder="Admin" />
+    <input className="input" type="text"  placeholder="Admin" />
     </Col>
     <Col>
-    <input className="control" type="text" placeholder="Administrator" />
+    <input className="input" type="text" placeholder="Administrator" />
     </Col>
   <Col> <Form.Check
     type="switch"

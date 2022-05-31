@@ -1,7 +1,6 @@
-import { Button, Col, Container, Row ,Stack} from 'react-bootstrap';
+import { Button, Col, Container, Row ,Stack,Form} from 'react-bootstrap';
 
 export default function RequestForm() {
-
     return (
 
         <div className="insideForm" >
@@ -12,51 +11,51 @@ export default function RequestForm() {
                 <Row>
                     <Col>
                         <label>Request Type</label><br></br>
-                        <input type="text" />
+                        <input className="input" type="text" />
                     </Col>
                     <Col>
                         <label>Organization</label><br></br>
-                        <input type="text" />
+                        <input className="input" type="text" />
                     </Col>
                     <Col>
                         <label>Discription</label><br></br>
-                        <input type="text" />
+                        <input className="input" type="text" />
                     </Col>
                     <Col>
                         <label>Equipments</label><br></br>
-                        <input type="text" />
+                        <input className="input" type="text" />
                     </Col>
                 </Row><br></br>
                 <Row>
                     <Col>
                         <label>Asset Location</label><br></br>
-                        <input type="text" />
+                        <input className="input" type="text" />
                     </Col>
                     <Col>
                         <label>Department</label><br></br>
-                        <input type="text" />
+                        <input className="input" type="text" />
                     </Col>
                     <Col>
                         <label>Type of Complaint</label><br></br>
-                        <input type="text" />
+                        <input className="input" type="text" />
                     </Col>
                     <Col>
                         <label>Class</label><br></br>
-                        <input type="text" />
+                        <input className="input" type="text" />
                     </Col>
                 </Row><br></br>
                 <Row>
                     <Col>
                         <label>Assign To</label><br></br>
-                        <input type="text" />
+                        <input className="input" type="text" />
                     </Col>
                     <Col>
                         <label>Created By</label><br></br>
-                        <input type="text" className="label-left" />
+                        <input type="text" className="label-left input" />
                     </Col>
                     <Col>
                         <label>Created Remarks</label><br></br>
-                        <input type="text" className="label-left" />
+                        <input type="text" className="label-left input" />
                     </Col>
                     <Col></Col>
                 </Row><br></br>

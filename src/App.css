@@ -1,3 +1,9 @@
+.input[type = "text"]{
+  margin-right: 10px !important;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
 .label {
   color: cornflowerblue;
   font-weight: bold;

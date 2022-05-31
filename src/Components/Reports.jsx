@@ -11,23 +11,23 @@ export default function Reports() {
                         <Row>
                             <Col>
                                 <label>Request Type</label>
-                                <input  type="text"  />
+                                <input  className="input" type="text"  />
                             </Col>
                             <Col>
                                 <label>Created On</label>
-                                <input  type="text"  />
+                                <input  className="input" type="text"  />
                             </Col>
                             <Col>
                                 <label>Modified On</label>
-                                <input  type="text"  />
+                                <input  className="input" type="text"  />
                             </Col>
                             <Col>
                                 <label>CRA Status</label>
-                                <input  type="text"  />
+                                <input  className="input" type="text"  />
                             </Col>
                             <Col>
                                 <label>Status</label><br></br>
-                                <input  type="text"  />
+                                <input  className="input" type="text"  />
                             </Col>
                         </Row><br></br><br></br>
                             <Button className="cra-button"

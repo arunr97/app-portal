@@ -3,104 +3,128 @@ import { Breadcrumb, Form } from "react-bootstrap";
 import PaginationComp from "./Utility/PaginationComp";
 import { Search, Filter } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
+import { getCustomerRequests } from "../services/customerRequest-service";
 
 export default function ViewAll() {
-  //let PageSize = 7;
-
+  const user = "arunkbr@godrej.com";
   const [PageSize, setPageSize] = useState(7);
   const [currentPage, setCurrentPage] = useState(1);
   const [records, SetRecords] = useState([
-    {
-      requestID: "CES/2022/12938987",
-      requestType: "CES",
-      description: "Tab Leakage",
-      createdin: "CRA",
-      craStatus: "Transferred to EAM",
-      eamStatus: "Work Request",
-      pendingWith: "CRA",
-    },
-    {
-      requestID: "CES/2022/12972367",
-      requestType: "CES",
-      description: "Tab Leakage",
-      createdin: "CRA",
-      craStatus: "Pending for Approval",
-      eamStatus: "Work Request",
-      pendingWith: "EAM",
-    },
-    {
-      requestID: "CES/2022/67236477",
-      requestType: "CES",
-      description: "Tab Leakage",
-      createdin: "CRA",
-      craStatus: "Approved",
-      eamStatus: "Work Request",
-      pendingWith: "CRA",
-    },
-    {
-      requestID: "CES/2022/1872645",
-      requestType: "CES",
-      description: "Tab Leakage",
-      createdin: "CRA",
-      craStatus: "Closed in CRA",
-      eamStatus: "Work Request",
-      pendingWith: "CRA",
-    },
-    {
-      requestID: "CES/2022/01831726",
-      requestType: "CES",
-      description: "Tab Leakage",
-      createdin: "CRA",
-      craStatus: "Pending for Approval",
-      eamStatus: "Work Request",
-      pendingWith: "CRA",
-    },
-    {
-      requestID: "CES/2022/01831726",
-      requestType: "CES",
-      description: "Tab Leakage",
-      createdin: "CRA",
-      craStatus: "Pending for Approval",
-      eamStatus: "Work Request",
-      pendingWith: "CRA",
-    },
-    {
-      requestID: "CES/2022/01831726",
-      requestType: "CES",
-      description: "Tab Leakage",
-      createdin: "CRA",
-      craStatus: "Pending for Approval",
-      eamStatus: "Work Request",
-      pendingWith: "CRA",
-    },
-    {
-      requestID: "CES/2022/01831726",
-      requestType: "CES",
-      description: "Tab Leakage",
-      createdin: "CRA",
-      craStatus: "Pending for Approval",
-      eamStatus: "Work Request",
-      pendingWith: "CRA",
-    },
-    {
-      requestID: "CES/2022/01831726",
-      requestType: "CES",
-      description: "Tab Leakage",
-      createdin: "CRA",
-      craStatus: "Pending for Approval",
-      eamStatus: "Work Request",
-      pendingWith: "CRA",
-    },
+    // {
+    //   requestID: "CES/2022/12938987",
+    //   requestType: "CES",
+    //   description: "Tab Leakage",
+    //   createdin: "CRA",
+    //   craStatus: "Transferred to EAM",
+    //   eamStatus: "Work Request",
+    //   pendingWith: "CRA",
+    //   createdBy: "arunkbr@godrej.com",
+    // },
+    // {
+    //   requestID: "CES/2022/12972367",
+    //   requestType: "CES",
+    //   description: "Tab Leakage",
+    //   createdin: "CRA",
+    //   craStatus: "Pending for Approval",
+    //   eamStatus: "Work Request",
+    //   pendingWith: "EAM",
+    //   createdBy: "arunkbr@godrej.com",
+    // },
+    // {
+    //   requestID: "CES/2022/67236477",
+    //   requestType: "CES",
+    //   description: "Tab Leakage",
+    //   createdin: "CRA",
+    //   craStatus: "Approved",
+    //   eamStatus: "Work Request",
+    //   pendingWith: "CRA",
+    //   createdBy: "sujit@godrej.com",
+    // },
+    // {
+    //   requestID: "CES/2022/1872645",
+    //   requestType: "CES",
+    //   description: "Tab Leakage",
+    //   createdin: "CRA",
+    //   craStatus: "Closed in CRA",
+    //   eamStatus: "Work Request",
+    //   pendingWith: "CRA",
+    //   createdBy: "arunkbr@godrej.com",
+    // },
+    // {
+    //   requestID: "CES/2022/01831726",
+    //   requestType: "CES",
+    //   description: "Tab Leakage",
+    //   createdin: "CRA",
+    //   craStatus: "Pending for Approval",
+    //   eamStatus: "Work Request",
+    //   pendingWith: "CRA",
+    //   createdBy: "shithij@godrej.com",
+    // },
+    // {
+    //   requestID: "CES/2022/01831726",
+    //   requestType: "CES",
+    //   description: "Tab Leakage",
+    //   createdin: "CRA",
+    //   craStatus: "Pending for Approval",
+    //   eamStatus: "Work Request",
+    //   pendingWith: "CRA",
+    //   createdBy: "shithij@godrej.com",
+    // },
+    // {
+    //   requestID: "CES/2022/01831726",
+    //   requestType: "CES",
+    //   description: "Tab Leakage",
+    //   createdin: "CRA",
+    //   craStatus: "Pending for Approval",
+    //   eamStatus: "Work Request",
+    //   pendingWith: "CRA",
+    //   createdBy: "shithij@godrej.com",
+    // },
+    // {
+    //   requestID: "CES/2022/01831726",
+    //   requestType: "CES",
+    //   description: "Tab Leakage",
+    //   createdin: "CRA",
+    //   craStatus: "Pending for Approval",
+    //   eamStatus: "Work Request",
+    //   pendingWith: "CRA",
+    //   createdBy: "sagargd@godrej.com",
+    // },
+    // {
+    //   requestID: "CES/2022/01831726",
+    //   requestType: "CES",
+    //   description: "Tab Leakage",
+    //   createdin: "CRA",
+    //   craStatus: "Pending for Approval",
+    //   eamStatus: "Work Request",
+    //   pendingWith: "CRA",
+    //   createdBy: "sagargd@godrej.com",
+    // },
   ]);
   const [filteredResult, setFilteredResult] = useState([]);
 
   const fetchAllPending = async () => {
+    let result = await getCustomerRequests().catch((err) => {
+      console.log(err, "Error in Fetching Customer Requests");
+    });
+    SetRecords(result);
     setFilteredResult(records);
   };
 
   useEffect(() => {
     fetchAllPending();
   }, []);
+
+  const handlePersonalReq = (e) => {
+    if (e.target.checked) {
+      let personalReq = filteredResult.filter((item) => {
+        return item.createdBy === user;
+      });
+      setFilteredResult(personalReq);
+    } else {
+      setFilteredResult(records);
+    }
+  };
 
   const handleGlobalSearch = (e) => {
     let searchText = e.target.value.toLowerCase();
@@ -159,7 +183,7 @@ export default function ViewAll() {
             </div>
             <div className="records-personal-pending">
               <Form.Group controlId="formCheckbox">
-                <Form.Check type="checkbox" />
+                <Form.Check type="checkbox" onChange={handlePersonalReq} />
               </Form.Group>
               <span className="records-personal-head">Personal Requests</span>
             </div>
